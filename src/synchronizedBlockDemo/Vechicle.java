@@ -1,10 +1,12 @@
-package threadDemoPetrolStation;
+package synchronizedBlockDemo;
+
+import threadDemoPetrolStation.PetrolStation;
 
 public class Vechicle extends Thread {
     int liters;
     String status;
     String type;
-    PetrolStation petrolStation;
+    threadDemoPetrolStation.PetrolStation petrolStation;
     public Vechicle(PetrolStation petrolStation){
         this.petrolStation = petrolStation;
     }
@@ -19,10 +21,10 @@ public class Vechicle extends Thread {
     public  void run(){
         if (type.equals("petrol")){
             System.out.println("Vehicle Name  : "+Thread.currentThread().getName());
-            petrolStation.synchronizedPetrol(Thread.currentThread().getName(), this.liters);
+       //     petrolStation.petrol(Thread.currentThread().getName(), this.liters);
         }else {
             System.out.println("Vehicle Name  : "+Thread.currentThread().getName());
-            petrolStation.synchronizedDiesel(Thread.currentThread().getName(),this.liters);
+//petrolStation.diesel(Thread.currentThread().getName(),this.liters);
         }
 
     }
