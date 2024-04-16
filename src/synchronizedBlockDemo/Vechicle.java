@@ -6,7 +6,7 @@ public class Vechicle extends Thread {
     int liters;
     String status;
     String type;
-    threadDemoPetrolStation.PetrolStation petrolStation;
+   PetrolStation petrolStation;
     public Vechicle(PetrolStation petrolStation){
         this.petrolStation = petrolStation;
     }
